@@ -36,6 +36,7 @@ namespace WindowsFormsApp_Probaviszga2019
             this.Text = $"{petriklajosszg.Geptermek[teremSzint].Nev}";
             picturebox_gepterem.Image = Image.FromFile(@"Kepek\" + petriklajosszg.Geptermek[teremSzint].Nev.Split()[0] + ".jpg");
             picturebox_gepterem.SizeMode = PictureBoxSizeMode.Zoom;
+
             panel_pont.Controls.Clear();
             for (int i = 0; i < petriklajosszg.Geptermek[teremSzint].SorDb; i++)
             {
@@ -46,6 +47,7 @@ namespace WindowsFormsApp_Probaviszga2019
                     kep.SetBounds(j * kepMeret, i * kepMeret, kepMeret, kepMeret);
                     kep.SizeMode = PictureBoxSizeMode.StretchImage;
                     kep.Padding = new Padding(2);
+
                     int x = i; 
                     int y = j;
                     kep.Click += (o, e) =>
